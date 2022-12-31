@@ -5,10 +5,11 @@ const modalContenedor = document.querySelector('.modal-contenedor');
 const abrirCarrito = document.getElementById('cesta-carrito');
 const cerrarCarrito = document.getElementById('btn-cerrar-carrito');
 const modalCarrito = document.querySelector('.modal-carrito');
-const comprarModal=document.querySelector('comprar-modal');
 
-const comprarButton = document.querySelector('.comprarButton');
-comprarButton.addEventListener('click', comprarButtonClicked);
+//const comprarModal=document.querySelector('comprar-modal');
+
+//const comprarButton = document.querySelector('.comprarButton');
+//comprarButton.addEventListener('click', comprarButtonClicked);
 
 abrirCarrito.addEventListener('click', () => {
     modalContenedor.classList.toggle('modal-active')
@@ -81,10 +82,11 @@ function updateShoppingCartTotal() {
       );
       total = total + shoppingCartItemPrice * shoppingCartItemQuantity;
     });
-  }
-function comprarButtonClicked() {
-    modalCarrito.innerHTML = '';
-updateShoppingCartTotal()
+  };
+//function comprarButtonClicked() {
+ //   modalCarrito.innerHTML = '';
+//updateShoppingCartTotal()
 
 
-};
+//};
+

@@ -4,6 +4,8 @@ import { obtenerCarritoStorage } from './storage.js';
 
 let carrito = [];
 
+
+
 const validarProductoRepetido = (productoId) => {
 
     if (localStorage.getItem("carrito")) {
@@ -70,7 +72,13 @@ const eliminarProductoCarrito = (productoId) => {
     actualizarTotalesCarrito(carritoActualizado);
     pintarCarrito(carritoActualizado);
 };
+const botonVaciar = document.getElementById('vaciar-carrito');
 
-  
+if (botonVaciar) {
+    botonVaciar.addEventListener("click", () => {
+      carrito = [];
+            eliminarProductoCarrito();
+    });
+  };
 
 export { agregarAlCarrito, validarProductoRepetido, pintarCarrito, eliminarProductoCarrito };

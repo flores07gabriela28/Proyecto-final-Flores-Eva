@@ -1,4 +1,5 @@
 import { validarProductoRepetido } from "./accionesCarrito.js";
+import { actualizarTotalesCarrito } from "./actualizarCarrito.js";
 
 const mostrarProductos = (productos) => {
   const contenedorProductos = document.getElementById("producto-contenedor");
@@ -26,6 +27,13 @@ const mostrarProductos = (productos) => {
       validarProductoRepetido(producto.id);
     });
   });
-};
+  
+     
+     
+    
+    
+  };
+
+
 
 export { mostrarProductos };
